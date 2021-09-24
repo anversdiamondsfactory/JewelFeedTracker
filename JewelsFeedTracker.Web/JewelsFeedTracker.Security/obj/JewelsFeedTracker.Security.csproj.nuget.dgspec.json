@@ -1,0 +1,500 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Security\\JewelsFeedTracker.Security.csproj": {}
+  },
+  "projects": {
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Common\\JewelsFeedTracker.Api.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Common\\JewelsFeedTracker.Api.Common.csproj",
+        "projectName": "JewelsFeedTracker.Api.Common",
+        "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Common\\JewelsFeedTracker.Api.Common.csproj",
+        "packagesPath": "C:\\Users\\Anver Sadat\\.nuget\\packages\\",
+        "outputPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anver Sadat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\JewelsFeedTracker.Data.Access.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\JewelsFeedTracker.Data.Access.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "TimeZoneConverter": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Models\\JewelsFeedTracker.Api.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Models\\JewelsFeedTracker.Api.Models.csproj",
+        "projectName": "JewelsFeedTracker.Api.Models",
+        "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Models\\JewelsFeedTracker.Api.Models.csproj",
+        "packagesPath": "C:\\Users\\Anver Sadat\\.nuget\\packages\\",
+        "outputPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anver Sadat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\JewelsFeedTracker.Data.Access.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\JewelsFeedTracker.Data.Access.csproj",
+        "projectName": "JewelsFeedTracker.Data.Access",
+        "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\JewelsFeedTracker.Data.Access.csproj",
+        "packagesPath": "C:\\Users\\Anver Sadat\\.nuget\\packages\\",
+        "outputPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anver Sadat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\JewelsFeedTracker.Utility.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\JewelsFeedTracker.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\JewelsFeedTracker.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\JewelsFeedTracker.Data.Models.csproj",
+        "projectName": "JewelsFeedTracker.Data.Models",
+        "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\JewelsFeedTracker.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Anver Sadat\\.nuget\\packages\\",
+        "outputPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anver Sadat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Queries\\JewelsFeedTracker.Queries.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Queries\\JewelsFeedTracker.Queries.csproj",
+        "projectName": "JewelsFeedTracker.Queries",
+        "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Queries\\JewelsFeedTracker.Queries.csproj",
+        "packagesPath": "C:\\Users\\Anver Sadat\\.nuget\\packages\\",
+        "outputPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Queries\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anver Sadat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Common\\JewelsFeedTracker.Api.Common.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Common\\JewelsFeedTracker.Api.Common.csproj"
+              },
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Models\\JewelsFeedTracker.Api.Models.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Api.Models\\JewelsFeedTracker.Api.Models.csproj"
+              },
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\JewelsFeedTracker.Data.Access.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Access\\JewelsFeedTracker.Data.Access.csproj"
+              },
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\JewelsFeedTracker.Data.Models.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\JewelsFeedTracker.Data.Models.csproj"
+              },
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\JewelsFeedTracker.Utility.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\JewelsFeedTracker.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "CsvDataTable": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "FileHelpers": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "TimeZoneConverter": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Security\\JewelsFeedTracker.Security.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Security\\JewelsFeedTracker.Security.csproj",
+        "projectName": "JewelsFeedTracker.Security",
+        "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Security\\JewelsFeedTracker.Security.csproj",
+        "packagesPath": "C:\\Users\\Anver Sadat\\.nuget\\packages\\",
+        "outputPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Security\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anver Sadat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Queries\\JewelsFeedTracker.Queries.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Queries\\JewelsFeedTracker.Queries.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\JewelsFeedTracker.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\JewelsFeedTracker.Utility.csproj",
+        "projectName": "JewelsFeedTracker.Utility",
+        "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\JewelsFeedTracker.Utility.csproj",
+        "packagesPath": "C:\\Users\\Anver Sadat\\.nuget\\packages\\",
+        "outputPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anver Sadat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\JewelsFeedTracker.Data.Models.csproj": {
+                "projectPath": "F:\\DiamondFactory\\master\\JewelFeedTracker\\JewelsFeedTracker.Web\\JewelsFeedTracker.Data.Models\\JewelsFeedTracker.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            },
+            "TimeZoneConverter": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

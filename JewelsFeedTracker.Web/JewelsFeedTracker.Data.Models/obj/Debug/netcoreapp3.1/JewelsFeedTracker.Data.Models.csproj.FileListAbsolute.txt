@@ -1,0 +1,17 @@
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\bin\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.deps.json
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\bin\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.dll
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\bin\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.pdb
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.AssemblyInfoInputs.cache
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.AssemblyInfo.cs
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.csproj.CoreCompileInputs.cache
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.dll
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.pdb
+F:\DiamondFactory\master\netdev\project_helpers\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.csproj.AssemblyReference.cache
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\bin\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.deps.json
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\bin\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.dll
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\bin\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.pdb
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.AssemblyInfoInputs.cache
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.AssemblyInfo.cs
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.csproj.CoreCompileInputs.cache
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.dll
+F:\DiamondFactory\master\JewelFeedTracker\JewelsFeedTracker.Web\JewelsFeedTracker.Data.Models\obj\Debug\netcoreapp3.1\JewelsFeedTracker.Data.Models.pdb
