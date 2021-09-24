@@ -68,6 +68,7 @@ namespace WebApiWithSwagger.HangfireJob
             FeedFactory<JewelsFeedTracker.Data.Models.Models.DataList> dharmanandanFactory = new DharmanandanFactory<JewelsFeedTracker.Data.Models.Models.DataList>();
             RecurringJob.AddOrUpdate(() => feedProcesser.ProcessDharmanandanFeed(dharmanandanFactory, url), cronValue);
             #endregion
+
             #region Rapnet Feed 
             url = "http://technet.rapaport.com/HTTP/DLS/GetFile.aspx?ShapeIDs=1,2,3,4,9,17,7,8,11,15,16&WeightFrom=0.20&WeightTo=30.00&ColorIDs=1,2,3,4,5,6,7,8&ClarityIDs=1,2,3,4,5,6,7,8&LabIDs=1,4,5,2,10,11,34,35,38&SortBy=Owner&White=1&Fancy=1&Programmatically=yes&Version=1.0&UseCheckedCulommns=1&cCT=1&cCERT=1&cCLAR=1&cCOLR=1&cCRTCM=1&cCountry=1&cCITY=1&cCulet=1&cCuletSize=1&cCuletCondition=1&cCUT=1&cDPTH=1&cFLR=1&cGIRDLE=1&cLOTNN=1&cMEAS=1&cMeasLength=1&cMeasWidth=1&cMeasDepth=1&cPOL=1&cPX=1&cDPX=1&cTPr=1&cCashTot=1&cRapSpec=1&cRatio=1&cCashDisc=1&cCash=1&cOWNER=1&cAct=1&cNC=1&cSHP=1&cSTATE=1&cSTOCK_NO=1&cSYM=1&cTBL=1&cSTONES=1&cCertificateImage=1&cImageURL=1&cCertID=1&cAvailability=1&cFluorColor=1&cFluorIntensity=1&cDateUpdated=1&ticket=";
             FeedFactory<ChildRapnet> rapnetFactory = new RapnetFactory<ChildRapnet>();
