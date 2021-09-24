@@ -27,7 +27,7 @@ namespace JewelsFeedTracker.FactoryManager
         public bool isSuccess = false;
 
         FeedQueryProcessor iFeedQueryProcessor;
-        TimeZoneInfo tzi = TZConvert.GetTimeZoneInfo("Central Standard Time"); 
+        TimeZoneInfo tzi = TZConvert.GetTimeZoneInfo("Central Standard Time");
 
         private static TimeZoneInfo INDIAN_ZONE = TZConvert.GetTimeZoneInfo("Asia/Kolkata"); // Get IST Zone and can be changed with zone based
         DateTime indianTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, INDIAN_ZONE);
@@ -45,16 +45,17 @@ namespace JewelsFeedTracker.FactoryManager
                 DataTable dtTarget = DataFormatter.ToDatableByCSV(RawDataUrl);
 
                 await DataBusinessRulesOnFeed(dtTarget); // Business rules execution logic on Raw Data
-
-                await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Dfe.ToString()); // Bulk data processing on stone_price1 Table
-                await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Dfe.ToString()); // Bulk data processing on Stone_price1_description Table
+                if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Dfe.ToString()); // Bulk data processing on stone_price1 Table
+                if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Dfe.ToString()); // Bulk data processing on Stone_price1_description Table
 
                 //DataFormatter.SaveFileLocalFolder(DataFormatter.ToDatableByCSV(RawDataUrl), DataFormatter.SetFeedFileName(FeedIdentifier.DFE.ToString(), 'R')); 
                 //DataFormatter.ToListByDataTable<DfrStock>(dtTarget, fileName); // Convert to List Data of raw data datatable
             }
             catch (Exception ex)
             {
-                throw ex;
+                Log.Error("exception is occurred in " + FeedIdentifier.Dfe.ToString(), ex.ToString());
             }
         }
         private Task<bool> DataBusinessRulesOnFeed(DataTable dtTarget)

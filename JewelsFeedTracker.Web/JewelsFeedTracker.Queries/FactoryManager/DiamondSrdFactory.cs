@@ -69,9 +69,10 @@ namespace JewelsFeedTracker.FactoryManager
 
                     DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
                     await DataBusinessRulesOnFeed(dtTarget);  // Business rules execution logic on Raw Data
-
-                    await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.DiamondSrd.ToString()); // Bulk data processing on stone_price1 Table
-                    await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.DiamondSrd.ToString()); // Bulk data processing on Stone_price1_description Table
+                     if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.DiamondSrd.ToString()); // Bulk data processing on stone_price1 Table
+                    if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.DiamondSrd.ToString()); // Bulk data processing on Stone_price1_description Table
 
                     //diamondSrdList = DataFormatter.ConvertDataTableToList<JewelsFeedTracker.Data.Models.Models.Table>(dtTarget);
                     //DataFormatter.ExportCsv(diamondSrdList, DataFormatter.SetFeedFileName(FeedIdentifier.DiamondSrd.ToString(), 'F'));
@@ -80,7 +81,7 @@ namespace JewelsFeedTracker.FactoryManager
             }
             catch (Exception ex)
             {
-                Log.Error(ex.InnerException.Message);
+                Log.Error("exception is occurred in " + FeedIdentifier.DiamondSrd.ToString(), ex.ToString());
             }
             //return diamondSrdList;
         }

@@ -51,9 +51,10 @@ namespace JewelsFeedTracker.FactoryManager
 
                     DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
                     await DataBusinessRulesOnFeed(dtTarget);// Business rules execution logic on Raw Data
-
-                    await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Sagar.ToString());// Bulk data processing on stone_price1 Table
-                    await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Sagar.ToString());// Bulk data processing on Stone_price1_description Table
+                     if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Sagar.ToString());// Bulk data processing on stone_price1 Table
+                    if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Sagar.ToString());// Bulk data processing on Stone_price1_description Table
 
                     //tranStockList = XMLHelper.ParseXML<tranStock>(modifiedXml, "Inventory");
                     //DataFormatter.ExportCsv(tranStockList, DataFormatter.SetFeedFileName(FeedIdentifier.Sagar.ToString(), 'F'));
@@ -61,9 +62,8 @@ namespace JewelsFeedTracker.FactoryManager
             }
             catch (Exception ex)
             {
-
+                Log.Error("exception is occurred in " + FeedIdentifier.Sagar.ToString(), ex.ToString());
             }
-            // return tranStockList;
         }
         private Task<bool> DataBusinessRulesOnFeed(DataTable dtTarget)
         {

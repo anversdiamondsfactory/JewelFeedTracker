@@ -41,42 +41,50 @@ namespace JewelsFeedTracker.FactoryManager
         public async override Task GetFeedData(string RawDataUrl)
         {
             Dharmananandan _dharmanData = null;
-            List<JewelsFeedTracker.Data.Models.Models.DataList> akarshList = null;
-            HttpClient client = new HttpClient();
-            string fileName = DataFormatter.SetFeedFileName(FeedIdentifier.Dharmanandan.ToString(), 'R');
-            DharmanDemo product = new DharmanDemo
+            try
             {
-                uniqID = "21953",
-                company = "Diamond Factory",
-                actCode = "Diam#Fact12#78",
-                selectAll = "",
-                StartIndex = "",
-                Count = "",
-                columns = "",
-                finder = "",
-                sort = ""
-            };
-            client.BaseAddress = new Uri(RawDataUrl);
-            client.DefaultRequestHeaders.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            string json = JsonConvert.SerializeObject(product);
+                List<JewelsFeedTracker.Data.Models.Models.DataList> akarshList = null;
+                HttpClient client = new HttpClient();
+                string fileName = DataFormatter.SetFeedFileName(FeedIdentifier.Dharmanandan.ToString(), 'R');
+                DharmanDemo product = new DharmanDemo
+                {
+                    uniqID = "21953",
+                    company = "Diamond Factory",
+                    actCode = "Diam#Fact12#78",
+                    selectAll = "",
+                    StartIndex = "",
+                    Count = "",
+                    columns = "",
+                    finder = "",
+                    sort = ""
+                };
+                client.BaseAddress = new Uri(RawDataUrl);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                string json = JsonConvert.SerializeObject(product);
 
-            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-            var requestUri = new Uri($"api/StockDispApi/getDiamondData", UriKind.Relative);
-            var response = client.PostAsync(requestUri, httpContent);
-            var jsonresult = response.Result.Content.ReadAsStringAsync();
-            if (DataFormatter.IsValidJson(jsonresult.Result))
+                StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+                var requestUri = new Uri($"api/StockDispApi/getDiamondData", UriKind.Relative);
+                var response = client.PostAsync(requestUri, httpContent);
+                var jsonresult = response.Result.Content.ReadAsStringAsync();
+                if (DataFormatter.IsValidJson(jsonresult.Result))
+                {
+                    WebClient webClient = new WebClient();
+                    DataTable dtTarget = (DataTable)JsonConvert.DeserializeObject(jsonresult.Result, (typeof(DataTable)));
+                    dtTarget.TableName = "DHARMAN_MAST";
+
+                    DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
+                    await DataBusinessRulesOnFeed(dtTarget);  // Business rules execution logic on Raw Data
+                     if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Dharmanandan.ToString());  // Bulk data processing on stone_price1 Table
+                    if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Dharmanandan.ToString());  // Bulk data processing on Stone_price1_description Table
+                                                                                                                       //DataTable dt = DataFormatter.GetJSONToDataTable(jsonresult.Result);               
+                }
+            }
+            catch (Exception ex)
             {
-                WebClient webClient = new WebClient();
-                DataTable dtTarget = (DataTable)JsonConvert.DeserializeObject(jsonresult.Result, (typeof(DataTable)));
-                dtTarget.TableName = "DHARMAN_MAST";
-
-                DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
-                await DataBusinessRulesOnFeed(dtTarget);  // Business rules execution logic on Raw Data
-
-                await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Dharmanandan.ToString());  // Bulk data processing on stone_price1 Table
-                await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Dharmanandan.ToString());  // Bulk data processing on Stone_price1_description Table
-                //DataTable dt = DataFormatter.GetJSONToDataTable(jsonresult.Result);               
+                Log.Error("exception is occurred in " + FeedIdentifier.Dharmanandan.ToString(), ex.ToString());
             }
 
             //_dharmanData = new JavaScriptSerializer().Deserialize<Dharmananandan>(jsonresult.Result);

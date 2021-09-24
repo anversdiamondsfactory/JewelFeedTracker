@@ -35,32 +35,40 @@ namespace JewelsFeedTracker.FactoryManager
         {
             iFeedQueryProcessor = new FeedQueryProcessor();
         }
-        public async override Task GetFeedData(string RawDataUrl) 
+        public async override Task GetFeedData(string RawDataUrl)
         {
-            string jsonStr = string.Empty;
-            List<FineStar> _FineStarResult = new List<FineStar>();
-            using (var wc = new WebClient())
+            try
             {
-                jsonStr = wc.DownloadString(RawDataUrl);
-                string modfiedJson = jsonStr.Replace(@"\", @"");
-                modfiedJson = modfiedJson.TrimStart('\"');
-                modfiedJson = modfiedJson.TrimEnd('\"');
-                modfiedJson = modfiedJson.Replace("\\", "");
-                string fileName = DataFormatter.SetFeedFileName(FeedIdentifier.Finestar.ToString(), 'R');
-                DataTable dtTarget = (DataTable)JsonConvert.DeserializeObject(modfiedJson, (typeof(DataTable)));
-                DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
+                string jsonStr = string.Empty;
+                List<FineStar> _FineStarResult = new List<FineStar>();
+                using (var wc = new WebClient())
+                {
+                    jsonStr = wc.DownloadString(RawDataUrl);
+                    string modfiedJson = jsonStr.Replace(@"\", @"");
+                    modfiedJson = modfiedJson.TrimStart('\"');
+                    modfiedJson = modfiedJson.TrimEnd('\"');
+                    modfiedJson = modfiedJson.Replace("\\", "");
+                    string fileName = DataFormatter.SetFeedFileName(FeedIdentifier.Finestar.ToString(), 'R');
+                    DataTable dtTarget = (DataTable)JsonConvert.DeserializeObject(modfiedJson, (typeof(DataTable)));
+                    DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
 
-                await DataBusinessRulesOnFeed(dtTarget); // Business rules execution logic on Raw Data
+                    await DataBusinessRulesOnFeed(dtTarget); // Business rules execution logic on Raw Data
+                     if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Finestar.ToString()); // Bulk data processing on stone_price1 Table
+                    if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                        await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Finestar.ToString()); // Bulk data processing on Stone_price1_description Table
 
-                await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Finestar.ToString()); // Bulk data processing on stone_price1 Table
-                await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Finestar.ToString()); // Bulk data processing on Stone_price1_description Table
+                    // _FineStarResult = JsonConvert.DeserializeObject<List<FineStar>>(modfiedJson);
+                    //DataFormatter.ExportCsv(_FineStarResult, DataFormatter.SetFeedFileName(FeedIdentifier.Finestar.ToString(), 'F'));
 
-                // _FineStarResult = JsonConvert.DeserializeObject<List<FineStar>>(modfiedJson);
-                //DataFormatter.ExportCsv(_FineStarResult, DataFormatter.SetFeedFileName(FeedIdentifier.Finestar.ToString(), 'F'));
-
-                //DataFormatter.ConvertToDataTable<FineStar>(_FineStarResult);
+                    //DataFormatter.ConvertToDataTable<FineStar>(_FineStarResult);
+                }
             }
-            
+            catch (Exception ex)
+            {
+                Log.Error("exception is occurred in " + FeedIdentifier.Finestar.ToString(), ex.ToString());
+            }
+
         }
         private Task<bool> DataBusinessRulesOnFeed(DataTable dtTarget)
         {

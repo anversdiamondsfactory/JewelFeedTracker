@@ -73,9 +73,10 @@ namespace JewelsFeedTracker.FactoryManager
                 DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
 
                 await DataBusinessRulesOnFeed(dtTarget);// Business rules execution logic on Raw Data
-
-                await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Rapnet.ToString());// Bulk data processing on stone_price1 Table
-                await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Rapnet.ToString());// Bulk data processing on Stone_price1_description Table
+                 if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Rapnet.ToString());// Bulk data processing on stone_price1 Table
+                if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Rapnet.ToString());// Bulk data processing on Stone_price1_description Table
                 //childRapnetList = DataFormatter.ToListByDataTable<ChildRapnet>(dtTarget, DataFormatter.SetFeedFileName(FeedIdentifier.Rapnet.ToString(), 'F'));
 
                 //DataFormatter.ExportCsv(childRapnetList, DataFormatter.SetFeedFileName(FeedIdentifier.Rapnet.ToString(), 'F'));
@@ -83,9 +84,9 @@ namespace JewelsFeedTracker.FactoryManager
             }
             catch (Exception ex)
             {
-
+                Log.Error("exception is occurred in " + FeedIdentifier.Rapnet.ToString(), ex.ToString());
             }
-            
+
         }
         private Task<bool> DataBusinessRulesOnFeed(DataTable dtTarget)
         {

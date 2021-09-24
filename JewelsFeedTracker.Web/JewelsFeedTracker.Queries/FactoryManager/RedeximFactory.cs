@@ -47,15 +47,16 @@ namespace JewelsFeedTracker.FactoryManager
                 DataTable dtTarget = DataFormatter.ToDatableByCSV(RawDataUrl);
                 Log.Information("After " + DateTime.Now.Date.AddSeconds(1) + " redexim is called");
                 await DataBusinessRulesOnFeed(dtTarget);
-
-                await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Redexim.ToString());
-                await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Redexim.ToString());
+                 if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Redexim.ToString());
+                if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Redexim.ToString());
                 // DataFormatter.ToListByDataTable<Redexim>(DataFormatter.ToDatableByCSV(RawDataUrl), DataFormatter.SetFeedFileName(FeedIdentifier.Redexim.ToString(), 'F'));
 
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Hangfire Jobs exception ----" + ex.Message);
+                Log.Error("exception is occurred in " + FeedIdentifier.Redexim.ToString(), ex.ToString());
             }
 
         }

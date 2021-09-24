@@ -57,9 +57,10 @@ namespace JewelsFeedTracker.FactoryManager
 
                 DataFormatter.SaveFileLocalFolder(dtTarget, fileName);
                 await DataBusinessRulesOnFeed(dtTarget);  // Business rules execution logic on Raw Data
-
-                await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Hvk.ToString());// Bulk data processing on stone_price1 Table
-                await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Hvk.ToString());// Bulk data processing on Stone_price1_description Table
+                 if (dtPrice1 != null && dtPrice1.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1, FeedIdentifier.Hvk.ToString());// Bulk data processing on stone_price1 Table
+                if (dtPrice1_description != null && dtPrice1_description.Rows.Count > 0)
+                    await iFeedQueryProcessor.SaveFeed(dtPrice1_description, FeedIdentifier.Hvk.ToString());// Bulk data processing on Stone_price1_description Table
 
                 //hvkList = XMLHelper.ParseXML<Row>("<Rows>" + data.InnerXml + "</Rows>", "Rows");
 
@@ -68,7 +69,7 @@ namespace JewelsFeedTracker.FactoryManager
             }
             catch (Exception ex)
             {
-
+                Log.Error("exception is occurred in " + FeedIdentifier.Hvk.ToString(), ex.ToString());
             }
             //return hvkList;
         }
